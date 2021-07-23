@@ -1,12 +1,10 @@
-import { Component } from 'react';
 import { FiPlusSquare } from 'react-icons/fi';
 
-import { Container } from './styles';
+import { Container, Text, Icon } from './styles';
 import Logo from '../../assets/logo.svg';
 
-class Header extends Component {
-  render() {
-    const { openModal } = this.props;
+function Header(props) {
+  const { openModal } = props;
 
     return (
       <Container>
@@ -18,10 +16,10 @@ class Header extends Component {
                 type="button"
                 onClick={openModal}
               >
-                <div className="text">Novo Prato</div>
-                <div className="icon">
+                <Text>Novo Prato</Text>
+                <Icon>
                   <FiPlusSquare size={24} />
-                </div>
+                </Icon>
               </button>
             </div>
           </nav>
@@ -29,6 +27,5 @@ class Header extends Component {
       </Container>
     )
   }
-};
 
 export default Header;
